@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import ProfileCard from "./ProfileCard";
 
-// hint: Array.map, 반복되는 코드를 하나의 컴포넌트(card)를 만들어서 재사용
 const users = [
   {
     name: "김용연",
@@ -29,8 +28,8 @@ const users = [
 
 export default function ProfileList() {
   return <div>
-    {users.map((user) => (
-      <ProfileCard name={user.name} major={user.major} currentAge={user.currentAge} nextYearAge={user.nextYearAge} movies={user.movies}/>
+    {users.map((user, index) => (
+      <ProfileCard key={index} name={user.name} major={user.major} currentAge={user.currentAge} nextYearAge={user.nextYearAge} movies={user.movies}/>
     ))}
     
   </div>;

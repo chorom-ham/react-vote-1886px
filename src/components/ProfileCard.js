@@ -16,8 +16,8 @@ export default function ProfileCard({name, major, currentAge, nextYearAge, movie
       </p>
       <h3>좋아하는 영화</h3>
       <ul>
-        {movies.map((movie) => (
-          <li>{movie}</li>
+        {movies.map((movie, index) => (
+          <li key={index}>{movie}</li>
         ))}
       </ul>
     </div>
