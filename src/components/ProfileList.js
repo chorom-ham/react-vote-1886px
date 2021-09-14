@@ -29,6 +29,9 @@ const users = [
 
 export default function ProfileList() {
   return <div>
-    <ProfileCard name={users[0].name} major={users[0].major} currentAge={users[0].currentAge} nextYearAge={users[0].nextYearAge} movies={users[0].movies}/>
+    {users.map((user) => (
+      <ProfileCard name={user.name} major={user.major} currentAge={user.currentAge} nextYearAge={user.nextYearAge} movies={user.movies}/>
+    ))}
+    
   </div>;
 }
