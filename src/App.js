@@ -10,6 +10,11 @@ const GlobalStyle = createGlobalStyle`
   }
   body {
     background-color : #F6FFDB;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 90%;
+    max-width: 50rem;
   }
 `;
 
