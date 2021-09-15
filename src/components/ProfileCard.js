@@ -39,11 +39,11 @@ export default function ProfileCard({
 }
 
 const Wrapper = styled.div`
-  padding: 20px;
-  margin: 15px;
+  padding: 1.25rem;
+  margin: 0.938rem;
   background-color: white;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
+  border-radius: 0.625rem;
 `;
 
 const ProfileLikes = styled.div`
@@ -53,11 +53,11 @@ const ProfileLikes = styled.div`
 const Button = styled.button`
   background-color: #5f27cd;
   color: white;
-  border-radius: 5px;
+  border-radius: 0.313rem;
   border: none;
-  padding: 3px 5px;
+  padding: 0.188rem 0.313rem;
   cursor: pointer;
-  margin-right: 8px;
+  margin-right: 0.5rem;
 `;
 
 const ProfileData = styled.div``;
