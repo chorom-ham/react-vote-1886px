@@ -10,16 +10,17 @@ export default function ProfileCard({
 }) {
   const [likes, setLikes] = useState(0); // 좋아요 개수
 
+  // button click event handler
   const handleClick = () => {
     setLikes(likes + 1);
   };
 
   return (
     <Wrapper>
-      <Likes>
+      <ProfileLikes>
         <Button onClick={handleClick}>좋아요</Button>
         <span>{likes}명이 좋아요를 눌렀습니다</span>
-      </Likes>
+      </ProfileLikes>
       <ProfileData>
         <h1>{name}</h1>
         <p>
@@ -45,7 +46,7 @@ const Wrapper = styled.div`
   border-radius: 10px;
 `;
 
-const Likes = styled.div`
+const ProfileLikes = styled.div`
   text-align: right;
 `;
 

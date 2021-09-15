@@ -1,5 +1,6 @@
 import ProfileCard from "./ProfileCard";
 
+// profile card에 들어갈 사용자 정보
 const users = [
   {
     name: "김용연",
