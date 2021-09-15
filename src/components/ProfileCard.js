@@ -7,26 +7,47 @@ export default function ProfileCard(props) {
 
   return (
     <Wrapper>
-      <button onClick={() => setLikes(likes + 1)}>choose</button>
-      <br />
-      Likes: {likes}
-      <div>
-        <h2>{name}</h2>
-        <li>{age} years old</li>
-        <li>{type}</li>
-        <li>{inheritance}</li>
-        <li>{thread}</li>
-        <li>{library}</li>
+      <rightEnded>
+        <LikeButton onClick={() => setLikes(likes + 1)}>choose</LikeButton>
         <br />
-        For further information, visit <a href={website}>{website}</a>
-      </div>
+        Likes: {likes}
+        <div>
+          <h1>{name}</h1>
+          <li>{age} years old</li>
+          <li>{type}</li>
+          <li>{inheritance}</li>
+          <li>{thread}</li>
+          <li>{library}</li>
+          <br />
+          For further information, visit <a href={website}>{website}</a>
+        </div>
+      </rightEnded>
     </Wrapper>
   );
 }
 
 const Wrapper = styled.div`
-  width: 70rem;
-  padding: 4rem;
-  margin: 4rem;
-  background-color: rgba(255, 255, 255, 0.3);
+  width: 50rem;
+  padding: 2rem;
+  margin: 2rem;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 1rem;
+  overflow: "hidden";
+  display: inline-flex;
+`;
+
+const LikeButton = styled.button`
+  width: 4rem;
+  padding: 0.5rem;
+  margin-right: 1rem;
+  border-radius: 0.5rem;
+  background-color: #5b68ff;
+  font-size: 0.6rem;
+  color: #fff;
+  text-align: center;
+`;
+
+const rightEnded = styled.div`
+  display: flex;
+  justify-content: flex-end;
 `;
