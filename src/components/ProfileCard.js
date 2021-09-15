@@ -16,25 +16,47 @@ export default function ProfileCard({
 
   return (
     <Wrapper>
-      <div className="profile__likes">
-        <button onClick={handleClick}>좋아요</button>
-        <span> {likes}명이 좋아요를 눌렀습니다</span>
-      </div>
-      <div className="profile__data">
-        <h2>{name}</h2>
+      <Likes>
+        <Button onClick={handleClick}>좋아요</Button>
+        <span>{likes}명이 좋아요를 눌렀습니다</span>
+      </Likes>
+      <ProfileData>
+        <h1>{name}</h1>
         <p>
           안녕하세요? 저는 이화여자대학교 {major}에 다니고 있어요. <br />
           올해는 {currentAge}살이고, 내년에는 {nextYearAge}살이에요.
         </p>
-        <h3>좋아하는 영화</h3>
+        <h2>좋아하는 영화</h2>
         <ul>
           {movies.map((movie, index) => (
             <li key={index}>{movie}</li>
           ))}
         </ul>
-      </div>
+      </ProfileData>
     </Wrapper>
   );
 }
 
-const Wrapper = styled.div``;
+const Wrapper = styled.div`
+  padding: 20px;
+  margin: 15px;
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+`;
+
+const Likes = styled.div`
+  text-align: right;
+`;
+
+const Button = styled.button`
+  background-color: #5f27cd;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  padding: 3px 5px;
+  cursor: pointer;
+  margin-right: 8px;
+`;
+
+const ProfileData = styled.div``;
