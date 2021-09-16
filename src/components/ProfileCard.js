@@ -15,6 +15,11 @@ export default function ProfileCard({ candidates }) {
     data => (<span>{data}<br /></span>)
   );
 
+  // 영화 리스트
+  const movies = candidates.movie.map(
+    (mov) => (<li>{mov}</li>)
+  );
+
   return (
     <Wrapper>
       <Like>
@@ -27,7 +32,7 @@ export default function ProfileCard({ candidates }) {
       </span>
       <h2>좋아하는 영화</h2>
       <ul>
-        <li>{candidates.movie}</li>
+        {movies}
       </ul>
     </Wrapper>
   );
