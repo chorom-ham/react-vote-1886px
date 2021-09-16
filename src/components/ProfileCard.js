@@ -1,6 +1,6 @@
 import { useState } from "react";
 import styled from "styled-components";
-import { GoThumbsup } from 'react-icons/go';
+import { GoThumbsup, GoThumbsdown } from 'react-icons/go';
 
 export default function ProfileCard({ candidates }) {
   
@@ -20,6 +20,11 @@ export default function ProfileCard({ candidates }) {
     (mov) => (<li>{mov}</li>)
   );
 
+  // 싫어요
+  const onDecrease = () => {
+    alert("악플 금지 -.-");
+  };
+
   return (
     <Wrapper>
       <Like>
@@ -31,19 +36,19 @@ export default function ProfileCard({ candidates }) {
         {information}
       </span>
       <h2>좋아하는 영화</h2>
-      <ul>
-        {movies}
-      </ul>
+      <ul>{movies}</ul>
+      <Button color="blue" onClick={onDecrease}><GoThumbsdown /></Button>
     </Wrapper>
   );
 }
 
 const Wrapper = styled.div`
   background-color: #ebfbee;
-  border: 2px solid #868e96;
-  border-radius: 1rem;
+  border: 5px solid #63e6be;
+  border-radius: 5rem;
   padding: 3rem;
   margin: 5rem;
+  box-shadow: 3px 3px 10px rgba(0,0,0,0.3);
 
   &:hover {
     background-color: #b2f2bb;
@@ -60,12 +65,12 @@ const Button = styled.button`
   border: none;
   border-radius: 50%;
   color: white;
-  background-color: salmon;
   box-shadow: 1px 1px 1px rgba(0,0,0,0.5);
   cursor: pointer;
   padding: 0.5rem;
   margin-right: 0.8rem;
 
+  background-color: ${props => props.color || "salmon"};
   &:hover {
     color: yellow;
   }
