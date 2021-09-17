@@ -21,7 +21,11 @@ export default function ProfileCard(candidates) {
       </Profile>
       <br />
       <FavMovie>좋아하는 영화</FavMovie>
-      <MovieList></MovieList>
+      <MovieList>
+        {candidates.movies.map((movie) => (
+          <li>{movie}</li>
+        ))}
+      </MovieList>
     </Wrapper>
   );
 }
