@@ -15,6 +15,12 @@ const candidates = [
     age: 99,
     movies: ["해리포터", "뽀로로 극장판", "짱구는 못말려"],
   },
+  {
+    name: "김이화",
+    major: "국어교육과",
+    age: 23,
+    movies: ["동주", "아이언맨", "마션"],
+  },
 ];
 export default function ProfileList() {
   return (

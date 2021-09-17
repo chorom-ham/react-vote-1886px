@@ -33,11 +33,12 @@ export default function ProfileCard(candidates) {
 const Wrapper = styled.div`
   background-color: white;
   width: 45rem;
-  outline: solid;
+  outline: auto;
+  margin-top: 2rem;
 `;
 const Like = styled.div`
   padding-top: 0.5rem;
-  margin-left: 27rem;
+  margin-left: 25rem;
 `;
 const Name = styled.div`
   font-size: 2.5rem;
@@ -48,6 +49,10 @@ const Profile = styled.div`
 `;
 const Button = styled.button`
   background-color: lightpink;
+  margin-right: .7rem;
+  border-radius: 20%;
+
+}
 `;
 const FavMovie = styled.div`
   font-size: 2.5rem;
