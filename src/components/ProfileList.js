@@ -1,4 +1,3 @@
-import styled from "styled-components";
 import ProfileCard from "./ProfileCard";
 
 export default function ProfileList() {
