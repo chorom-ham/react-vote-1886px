@@ -4,15 +4,14 @@ import styled from "styled-components";
 export default function ProfileCard({ name, major, age, nextYearAge, movies }) {
   const [likes, setLikes] = useState(0); // 좋아요 개수
 
-  // button click event handler
-  const handleClick = () => {
+  const handleButtonClick = () => {
     setLikes(likes + 1);
   };
 
   return (
     <Wrapper>
       <ProfileLikes>
-        <LikeButton onClick={handleClick}>좋아요</LikeButton>
+        <LikeButton onClick={handleButtonClick}>좋아요</LikeButton>
         <span>{likes}명이 좋아요를 눌렀습니다</span>
       </ProfileLikes>
       <ProfileData>
@@ -23,8 +22,8 @@ export default function ProfileCard({ name, major, age, nextYearAge, movies }) {
         </p>
         <MovieTitle>좋아하는 영화</MovieTitle>
         <MovieLists>
-          {movies.map((movie, index) => (
-            <li key={index}>{movie}</li>
+          {movies.map((movie) => (
+            <li key={movie.id}>{movie.title}</li>
           ))}
         </MovieLists>
       </ProfileData>

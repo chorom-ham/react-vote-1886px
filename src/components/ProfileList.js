@@ -7,21 +7,48 @@ const USERS = [
     name: "김용연",
     major: "컴퓨터공학과",
     age: 21,
-    movies: ["대니쉬 걸", "포레스트 검프"],
+    movies: [
+      {
+        id: 0,
+        title: "대니쉬 걸",
+      },
+      {
+        id: 1,
+        title: "포레스트 검프",
+      },
+    ],
   },
   {
     id: 1,
     name: "김영희",
     major: "조경학과",
     age: 20,
-    movies: ["포미니츠", "빌리 엘리어트"],
+    movies: [
+      {
+        id: 0,
+        title: "포미니츠",
+      },
+      {
+        id: 1,
+        title: "빌리 엘리어트",
+      },
+    ],
   },
   {
     id: 2,
     name: "권철수",
     major: "경영학과",
     age: 22,
-    movies: ["샹치", "너의 이름은"],
+    movies: [
+      {
+        id: 0,
+        title: "샹치",
+      },
+      {
+        id: 1,
+        title: "너의 이름은",
+      },
+    ],
   },
 ];
 
