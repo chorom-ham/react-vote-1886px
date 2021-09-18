@@ -40,10 +40,10 @@ export default function ProfileCard({
 
 const Wrapper = styled.div`
   padding: 1.25rem;
-  margin: 0.938rem;
+  margin: 0.9rem;
   background-color: white;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 0.625rem;
+  border-radius: 0.6rem;
 `;
 
 const ProfileLikes = styled.div`
@@ -53,9 +53,9 @@ const ProfileLikes = styled.div`
 const LikeButton = styled.button`
   background-color: #5f27cd;
   color: white;
-  border-radius: 0.313rem;
+  border-radius: 0.3rem;
   border: none;
-  padding: 0.188rem 0.313rem;
+  padding: 0.2rem 0.3rem;
   cursor: pointer;
   margin-right: 0.5rem;
 `;
