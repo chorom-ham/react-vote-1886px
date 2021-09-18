@@ -4,7 +4,7 @@ import styled from "styled-components";
 export default function ProfileCard(candidates) {
   const [likes, setLikes] = useState(0); // 좋아요 개수
 
-  const like_number = () => {
+  const likeNumber = () => {
     setLikes(likes + 1);
   };
   return (
