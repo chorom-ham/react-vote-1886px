@@ -6,10 +6,15 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   }
   html {
-    font-size : 10px;
+    font-size : 12px;
   }
   body {
     background-color : #F6FFDB;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 90%;
+    max-width: 37rem;
   }
 `;
 
