@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
 import ProfileList from "./components/ProfileList";
 
 const GlobalStyle = createGlobalStyle`
@@ -9,16 +9,21 @@ const GlobalStyle = createGlobalStyle`
     font-size : 10px;
   }
   body {
-    background-color : #F6FFDB;
+    background-color : skyblue;
+    display : flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 90%;
+    max-width: 37rem;
   }
 `;
 
 function App() {
   return (
-    <>
+    <div>
       <GlobalStyle />
       <ProfileList />
-    </>
+    </div>
   );
 }
 
