@@ -1,13 +1,7 @@
 import { useState } from "react";
 import styled from "styled-components";
 
-export default function ProfileCard({
-  name,
-  major,
-  currentAge,
-  nextYearAge,
-  movies,
-}) {
+export default function ProfileCard({ name, major, age, nextYearAge, movies }) {
   const [likes, setLikes] = useState(0); // 좋아요 개수
 
   // button click event handler
@@ -25,7 +19,7 @@ export default function ProfileCard({
         <Name>{name}</Name>
         <p>
           안녕하세요? 저는 이화여자대학교 {major}에 다니고 있어요. <br />
-          올해는 {currentAge}살이고, 내년에는 {nextYearAge}살이에요.
+          올해는 {age}살이고, 내년에는 {nextYearAge}살이에요.
         </p>
         <MovieTitle>좋아하는 영화</MovieTitle>
         <MovieLists>
