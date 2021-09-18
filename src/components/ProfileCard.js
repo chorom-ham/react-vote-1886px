@@ -18,21 +18,21 @@ export default function ProfileCard({
   return (
     <Wrapper>
       <ProfileLikes>
-        <Button onClick={handleClick}>좋아요</Button>
+        <LikeButton onClick={handleClick}>좋아요</LikeButton>
         <span>{likes}명이 좋아요를 눌렀습니다</span>
       </ProfileLikes>
       <ProfileData>
-        <h1>{name}</h1>
+        <Name>{name}</Name>
         <p>
           안녕하세요? 저는 이화여자대학교 {major}에 다니고 있어요. <br />
           올해는 {currentAge}살이고, 내년에는 {nextYearAge}살이에요.
         </p>
-        <h2>좋아하는 영화</h2>
-        <ul>
+        <MovieTitle>좋아하는 영화</MovieTitle>
+        <MovieLists>
           {movies.map((movie, index) => (
             <li key={index}>{movie}</li>
           ))}
-        </ul>
+        </MovieLists>
       </ProfileData>
     </Wrapper>
   );
@@ -50,7 +50,7 @@ const ProfileLikes = styled.div`
   text-align: right;
 `;
 
-const Button = styled.button`
+const LikeButton = styled.button`
   background-color: #5f27cd;
   color: white;
   border-radius: 0.313rem;
@@ -61,3 +61,9 @@ const Button = styled.button`
 `;
 
 const ProfileData = styled.div``;
+
+const Name = styled.h1``;
+
+const MovieTitle = styled.h2``;
+
+const MovieLists = styled.ul``;
