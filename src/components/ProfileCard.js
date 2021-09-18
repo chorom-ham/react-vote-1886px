@@ -2,37 +2,38 @@ import { useState } from "react";
 import styled from "styled-components";
 import { GoThumbsup, GoThumbsdown } from "react-icons/go";
 
-export default function ProfileCard({ candidates }) {
+export default function ProfileCard({ name, age, major, info, movie }) {
   // 좋아요 추가
   const [likes, setLikes] = useState(0);
-  const onIncrease = () => {
+  const increseLikes = () => {
     setLikes((prevLikes) => prevLikes + 1);
   };
 
-  // 소개말 줄바꿈
-  const information = candidates.info.map((data) => <p>{data}</p>);
-
   // 영화 리스트
-  const movies = candidates.movie.map((mov) => <li>{mov}</li>);
+  const movies = movie.map((movie) => <li>{movie}</li>);
 
   // 싫어요
-  const onDecrease = () => {
+  const decreaseLikes = () => {
     alert("악플 금지 -.-");
   };
 
   return (
     <Wrapper>
       <Like>
-        <Button onClick={onIncrease}>
+        <Button onClick={increseLikes}>
           <GoThumbsup />
         </Button>
         <span>{likes}명이 좋아요를 눌렀습니다.</span>
       </Like>
-      <h1>{candidates.name}</h1>
-      <span>{information}</span>
+      <h1>{name}</h1>
+      <p>안녕하세요? 저는 {major}이에요.</p>
+      <p>
+        {age}살이고요, 눈감았다 뜨면 {age + 1}살이네요.
+      </p>
+      <p>{info}</p>
       <h2>좋아하는 영화</h2>
       <ul>{movies}</ul>
-      <Button color="blue" onClick={onDecrease}>
+      <Button color="blue" onClick={decreaseLikes}>
         <GoThumbsdown />
       </Button>
     </Wrapper>
