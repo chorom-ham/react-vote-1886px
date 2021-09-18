@@ -4,13 +4,13 @@ import styled from "styled-components";
 export default function ProfileCard(candidates) {
   const [likes, setLikes] = useState(0); // 좋아요 개수
 
-  const likeNumber = () => {
+  const likeNumbers = () => {
     setLikes(likes + 1);
   };
   return (
     <Wrapper>
       <Like>
-        <Button onClick={like_number}>좋아요</Button>
+        <Button onClick={likeNumbers}>좋아요</Button>
         {likes}명이 '좋아요'를 눌렀습니다.
       </Like>
       <Profile>
