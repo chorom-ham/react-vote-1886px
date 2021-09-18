@@ -1,7 +1,7 @@
 import ProfileCard from "./ProfileCard";
 
 // profile card에 들어갈 사용자 정보
-const users = [
+const USERS = [
   {
     name: "김용연",
     major: "컴퓨터공학과",
@@ -28,14 +28,14 @@ const users = [
 export default function ProfileList() {
   return (
     <div>
-      {users.map((user, index) => (
+      {USERS.map((USERS, index) => (
         <ProfileCard
           key={index}
-          name={user.name}
-          major={user.major}
-          currentAge={user.currentAge}
-          nextYearAge={user.nextYearAge}
-          movies={user.movies}
+          name={USERS.name}
+          major={USERS.major}
+          currentAge={USERS.currentAge}
+          nextYearAge={USERS.nextYearAge}
+          movies={USERS.movies}
         />
       ))}
     </div>
