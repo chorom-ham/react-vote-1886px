@@ -48,7 +48,7 @@ const Wrapper = styled.div`
   padding: 1.5rem 4rem 3rem 4rem;
   background-color: white;
   border-radius: 1.5rem;
-
+  
   ul {
     margin: 0;
   }
