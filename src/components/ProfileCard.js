@@ -52,22 +52,18 @@ const Wrapper = styled.div`
   ul {
     margin: 0;
   }
-
   li {
     font-size: 1.3rem;
   }
-
   .buttonSection {
     display: inline-flex;
     justify-content: flex-end;
   }
-
   .buttonSection > p {
     font-size: 1.1rem;
     margin: 0;
     font-color: grey;
   }
-
   button {
     fill:red;
     border: none;
@@ -77,7 +73,6 @@ const Wrapper = styled.div`
   button:hover{
     fill: ${darken(0.1, "Red")};
   }
-
   svg {
     margin-top: 0.4rem;
     width: 1.8rem;
