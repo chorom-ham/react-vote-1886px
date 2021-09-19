@@ -12,8 +12,7 @@ export default function ProfileCard({person}) {
         </StyledMovieList>
     );
 
-
-    function ButtonSection() {
+    function LikeButton() {
         const [likes, setLikes] = useState(0); // 좋아요 개수
         const [likeState, setLikeState] = useState("unlike");
         const [color, setColor] = useState("grey");
@@ -26,7 +25,7 @@ export default function ProfileCard({person}) {
             setColor("grey")
         };
 
-        const LikeButton = () => {
+        const LikeButtonClick = () => {
             if (likeState === "unlike") {
                 like();
                 setLikeState("like");
@@ -37,29 +36,27 @@ export default function ProfileCard({person}) {
         };
 
         return (
-            <StyledButtonSection color={color}>
-                <button value='unlike' onClick={LikeButton}>
+            <StyledLikeButton color={color}>
+                <button value='unlike' onClick={LikeButtonClick}>
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                         <path
                             d="M12 4.435c-1.989-5.399-12-4.597-12 3.568 0 4.068 3.06 9.481 12 14.997 8.94-5.516 12-10.929 12-14.997 0-8.118-10-8.999-12-3.568z"/>
                     </svg>
                 </button>
                 <p>{likes}명이 좋아요를 눌렀습니다</p>
-            </StyledButtonSection>
+            </StyledLikeButton>
         );
     };
 
-
     return (
         <Wrapper>
-            <ButtonSection />
+            <LikeButton />
             <h2>{person.name}</h2>
             <p>
                 안녕하세요! 저는 {person.school} {person.major}에 다니고 있어요.
                 올해는 {person.age}살이고, 내년에는 {person.age+1}살이에요.
             </p>
             <MovieList />
-
         </Wrapper>
     );
 };
@@ -85,7 +82,7 @@ const Wrapper = styled.div`
   }
 `;
 
-const StyledButtonSection = styled.div`
+const StyledLikeButton = styled.div`
   display: inline-flex;
   justify-content: flex-end;
   
@@ -94,9 +91,14 @@ const StyledButtonSection = styled.div`
     margin: 0;
     color: grey;
   }
+  svg {
+    margin-top: 0.4rem;
+    width: 1.8rem;
+    height: 1.8rem;
+  }
   
   ${ ({color}) => {
-      return css`
+    return css`
         button {
           fill: ${color};
           border: none;
@@ -109,12 +111,6 @@ const StyledButtonSection = styled.div`
         }
     `;
   }}
-
-  svg {
-    margin-top: 0.4rem;
-    width: 1.8rem;
-    height: 1.8rem;
-  }
 `;
 
 const StyledMovieList = styled.div`
