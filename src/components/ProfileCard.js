@@ -8,16 +8,9 @@ export default function ProfileCard({person}) {
         setLikes(likes + 1)
     );
 
-    function movieList(){
-        return(
-            <>
-                {person.movies.map((movie, index) =>
-                    <li key = {index}>{movie}</li>
-                )}
-            </>
-        );
-
-    }
+    const MovieList = person.movies.map((movie, index) =>
+        <li key = {index}>{movie}</li>
+    );
 
     return (
         <Wrapper>
@@ -34,7 +27,7 @@ export default function ProfileCard({person}) {
             </p>
             <h3>좋아하는 영화</h3>
             <ul>
-                {movieList()}
+                {MovieList}
             </ul>
         </Wrapper>
     );

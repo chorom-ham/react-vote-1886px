@@ -1,13 +1,12 @@
 import styled from "styled-components";
 import {GlobalStyle} from "../App"
 import ProfileCard from "./ProfileCard";
-import {useState} from "react";
-import React from "react";
+import React, {useState} from "react";
 
 // hint: Array.map, 반복되는 코드를 하나의 컴포넌트(card)를 만들어서 재사용
 export default function ProfileList() {
-    const schoolDefault = useState("이화여자대학교");
-    const majorDefault = useState("컴퓨터공학전공");
+    const schoolDefault = "이화여자대학교", majorDefault = "컴퓨터공학전공";
+
     const people = [
         {
             name: "정연희",
