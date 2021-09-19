@@ -2,27 +2,39 @@ import { createGlobalStyle } from "styled-components";
 import ProfileList from "./components/ProfileList";
 import {FaPlus} from "react-icons/fa";
 import styled from "styled-components";
-import {IconContext} from "react-icons";
+import Dialog from "./components/Dialog";
+import {useState} from "react";
 
 function App() {
+    const [visible, setVisible] = useState(false);
+    const onClick = () => {
+        setVisible(true);
+    };
+    const onAdd = () => {
+        setVisible(false);
+    };
+    const onCancel = () => {
+        setVisible(false);
+    };
+
+    const TitleSection = () => (
+        <StyledTitleSection>
+            <h1>Profiles</h1>
+            <button onClick={onClick}>
+                <FaPlus />
+            </button>
+        </StyledTitleSection>
+    );
+
     return (
         <>
             <GlobalStyle/>
             <TitleSection/>
             <ProfileList/>
-
+            <Dialog onCick={onClick} onAdd={onAdd} onCancel={onCancel} visible={visible}/>
         </>
     );
 }
-
-const TitleSection = () => (
-    <StyledTitleSection>
-        <h1>Profiles</h1>
-        <button>
-            <FaPlus />
-        </button>
-    </StyledTitleSection>
-);
 
 const StyledTitleSection = styled.div`
   display: inline-flex;
@@ -40,6 +52,13 @@ const StyledTitleSection = styled.div`
     border: none;
     background-color: transparent;
     padding: 0;
+    transition-duration: 0.2s;
+  }
+  button:hover{
+    svg{
+      fill: grey;
+
+    }
   }
   svg {
     color: white; 
