@@ -1,7 +1,25 @@
 import React, {useState} from 'react';
-import styled from 'styled-components';
+import styled, {keyframes} from 'styled-components';
 import ProfileList from './ProfileList';
 import {darken} from "polished";
+
+const fade = keyframes`
+  from {
+    opactiy: 0;
+  }
+  to {
+    opacity: 1;
+  }
+`;
+
+const slideUp = keyframes`
+  from {
+    transform: translateY(200px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+`;
 
 const DialogBackground = styled.div`
   position: fixed;
@@ -13,6 +31,11 @@ const DialogBackground = styled.div`
   align-items: center;
   justify-content: center;
   background: rgba(255, 255, 126, 0.8);
+
+  animation-duration: 0.3s;
+  animation-timing-function: ease-out;
+  animation-name: ${fade};
+  animation-fill-mode: forwards;
 `;
 
 const DialogBlock = styled.div`
@@ -21,6 +44,11 @@ const DialogBlock = styled.div`
   padding: 5rem;
   background: white;
   border-radius: 5rem;
+
+  animation-duration: 0.3s;
+  animation-timing-function: ease-out;
+  animation-name: ${slideUp};
+  animation-fill-mode: forwards;
   
   h1{
     margin: 0 0 2rem 0;
