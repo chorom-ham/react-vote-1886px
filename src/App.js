@@ -23,21 +23,6 @@ export const GlobalStyle = createGlobalStyle`
     margin-left: 2rem;
     margin-bottom: 1rem;
   }
-  h2{
-    font-size: 3rem;
-    font-weight: bolder;
-    margin: 0;
-  }
-  h3{
-    font-size: 2rem;
-    margin-bottom: 0.8rem;
-    margin-top: 0rem;
-  }
-  p{
-    font-size: 1.4rem;
-    line-height: 2.5rem;
-    margin: 1.5rem 0;
-    }
 `;
 
 function App() {
