@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import {GlobalStyle} from "../App"
 import ProfileCard from "./ProfileCard";
 import React, {useState} from "react";
 
@@ -32,10 +31,8 @@ export default function ProfileList() {
     ]
 
     return (
-        <div>
-            {people.map((person, index) =>
-                <ProfileCard person={person} />
-            )}
-        </div>
+        people.map((person, index) =>
+            <ProfileCard person={person} />
+        )
     );
 };
